@@ -25,8 +25,10 @@
         <td>{{$val->tensao}}</td>
         <td>{{$val->marca}}</td>
         <td >
-          <button class="btn btn-outline-danger" id="type="button">DELETAR</button>
-          <button class="btn btn-outline-info" id="type="button">EDITAR</button>
+          
+          <a href="/deletar/{{$val->id}}" class="btn btn-outline-danger">Deletar</a>
+          <a href="/editar/{{$val->id}}" class="btn btn-outline-info">Editar</a>
+          
         </td>
       </tr>
       @endforeach

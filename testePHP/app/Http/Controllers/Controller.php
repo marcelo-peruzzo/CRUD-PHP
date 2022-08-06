@@ -15,6 +15,22 @@ class Controller extends BaseController
 
     public function cadastrar(Request $request){
 
+        if($request -> submit == "edit"){
+
+           $modif = DB::table('produtos')
+              ->where('id', $request->id)
+              ->update(
+                [
+                'nome' => $request->nome,
+                'descricao' => $request->descricao,
+                'tensao' => $request->tensao,
+                'marca' => $request->marca,
+                'quantidade' => $request->quantidade
+                ]
+            );
+            
+        }else{
+        
         DB::table('produtos')->insert(
             [
                 'nome' => $request->nome,
@@ -24,7 +40,7 @@ class Controller extends BaseController
                 'quantidade' => $request->quantidade
                 ]
         );
-    
+    }
         return redirect('/cadastro');
     
     }
@@ -32,6 +48,18 @@ class Controller extends BaseController
     public function retorno(){
         $result = DB::select('select * from produtos');
         return view('listagem', ['produtos' => $result]);
+    }
+
+    public function deletar($id){
+
+        $deleted = DB::table('produtos')->where('id', '=', $id)->delete();
+        return redirect('/listar_produtos');
+    }
+
+    public function editar($id){
+
+        $result = DB::table('produtos')->where('id', '=', $id)->first();
+        return view('cadastrar', ['produtos' => $result]);
     }
 }
 

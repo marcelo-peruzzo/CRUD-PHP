@@ -35,24 +35,32 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 
         {{--Menu hamburguer --}}
-        <button class="navbar-toggler">
-            <span class='navbar-toggler-icon'></span>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="/cadastro" class="nav-link active">Cadastrar</a>
-            </li>
-            <li class="nav-item">
-                <a href="/listar_produtos" class="nav-link">Produtos</a>
-            </li>
-        </ul>
-    </nav>
+
+        <div class="collapse navbar-collapse" id="nav-target">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/cadastro" class="nav-link active">Cadastrar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/listar_produtos" class="nav-link">Produtos</a>
+                </li>
+            </ul>
+        </div>
+    </nav> {{--Fim Menu  --}}
+    
         @yield('content')
         <footer>
             <p>CRUD PHP &copy; 2022</p>
         </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>

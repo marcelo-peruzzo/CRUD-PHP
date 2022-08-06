@@ -19,6 +19,12 @@ Route::get('/cadastro', function () {
     return view('cadastrar');
 });
 
-Route::post('/cadastrar_produto', 'App\Http\Controllers\Controller@cadastrar');
+Route::post('/cadastrar_produto/{produto?}', 'App\Http\Controllers\Controller@cadastrar');
 
 Route::get('/listar_produtos', 'App\Http\Controllers\Controller@retorno');
+
+Route::get('/deletar/{id}', 'App\Http\Controllers\Controller@deletar');
+
+Route::get('/editar/{id}', 'App\Http\Controllers\Controller@editar');
+
+Route::get('/', 'App\Http\Controllers\Controller@retorno');
