@@ -7,8 +7,10 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-md-5">
+    
+            {{-- FORMULARIO INICIA AQUI --}}
 <form action="/cadastrar_produto" method="POST">
-    @csrf
+    @csrf 
     <div class="mb-3">
       <label for="nome" class="form-label">Nome</label>
       <input type="text" class="form-control" name="nome" id="nome" required>
@@ -41,7 +43,7 @@
         </select>
     </div>
     <button type="submit" class="btn btn-primary">Cadastrar</button>
-  </form>
+  </form> {{-- FORMULARIO ACABA AQUI --}}
         </div>
     </div>
 </div>
