@@ -4,7 +4,8 @@
 
 @section('content')
 
-<div>
+<div class="container">
+  <div class="row d-flex justify-content-center">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -23,10 +24,15 @@
         <td>{{$val->quantidade}}</td>
         <td>{{$val->tensao}}</td>
         <td>{{$val->marca}}</td>
+        <td >
+          <button class="btn btn-outline-danger" id="type="button">DELETAR</button>
+          <button class="btn btn-outline-info" id="type="button">EDITAR</button>
+        </td>
       </tr>
       @endforeach
     </tbody>
   </table>
+  </div>
 
 </div>
 

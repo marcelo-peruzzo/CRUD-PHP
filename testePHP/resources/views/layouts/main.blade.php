@@ -31,6 +31,25 @@
         </style>
     </head>
     <body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+        {{--Menu hamburguer --}}
+        <button class="navbar-toggler">
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/cadastro" class="nav-link active">Cadastrar</a>
+            </li>
+            <li class="nav-item">
+                <a href="/listar_produtos" class="nav-link">Produtos</a>
+            </li>
+        </ul>
+    </nav>
         @yield('content')
         <footer>
             <p>CRUD PHP &copy; 2022</p>
