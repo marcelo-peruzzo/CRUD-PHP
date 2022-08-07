@@ -14,6 +14,7 @@
         <th scope="col">Quantidade</th>
         <th scope="col">Voltagem</th>
         <th scope="col">Fabricante</th>
+        <th scope="col">Descrição</th>
       </tr>
     </thead>
     <tbody>
@@ -24,11 +25,10 @@
         <td>{{$val->quantidade}}</td>
         <td>{{$val->tensao}}</td>
         <td>{{$val->marca}}</td>
+        <td>{{$val->descricao}}</td>
         <td >
-          
           <a href="/deletar/{{$val->id}}" class="btn btn-outline-danger">Deletar</a>
           <a href="/editar/{{$val->id}}" class="btn btn-outline-info">Editar</a>
-          
         </td>
       </tr>
       @endforeach
