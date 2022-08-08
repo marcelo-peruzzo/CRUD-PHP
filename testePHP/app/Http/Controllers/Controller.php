@@ -28,6 +28,8 @@ class Controller extends BaseController
                 'quantidade' => $request->quantidade
                 ]
             );
+            $result = DB::select('select * from produtos');
+            return view('listagem', ['editar' => true, 'produtos' => $result]);
             
         }else{
         
@@ -41,7 +43,8 @@ class Controller extends BaseController
                 ]
         );
     }
-        return redirect('/cadastro');
+    $result = DB::select('select * from produtos');
+    return view('listagem', ['cadastrar' => true, 'produtos' => $result]);
     
     }
 
@@ -52,8 +55,9 @@ class Controller extends BaseController
 
     public function deletar($id){
 
-        $deleted = DB::table('produtos')->where('id', '=', $id)->delete();
-        return redirect('/listar_produtos');
+        DB::table('produtos')->where('id', '=', $id)->delete();
+        $result = DB::select('select * from produtos');
+        return view('listagem', ['deletar' => true, 'produtos' => $result]);
     }
 
     public function editar($id){

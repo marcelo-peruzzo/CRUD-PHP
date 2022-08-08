@@ -18,6 +18,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
         <!-- Styles -->
         <style>
@@ -42,9 +43,6 @@
         <div class="collapse navbar-collapse" id="nav-target">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
                     <a href="/cadastro" class="nav-link active">Cadastrar</a>
                 </li>
                 <li class="nav-item">
@@ -55,9 +53,11 @@
     </nav> {{--Fim Menu  --}}
     
         @yield('content')
+    <div class="mt-5">
         <footer>
-            <p>CRUD PHP &copy; 2022</p>
+            <p>Marcelo Peruzzo CRUD PHP &copy; 2022</p>
         </footer>
+     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

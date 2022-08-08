@@ -30,10 +30,7 @@
       </div>
     <div class="mb-3">
       <label for="descricao" class="form-label">Descrição</label>
-      <textarea  
-      value="5"    
-       id="descricao" name="descricao" rows="5" class="form-control" required>@if (isset($produtos))@php echo($produtos->descricao); @endphp @endif 
-      </textarea>
+      <textarea id="descricao" name="descricao" rows="5" class="form-control" required>@if (isset($produtos))@php echo($produtos->descricao); @endphp @endif</textarea>
     </div>
     <div class="mb-3">
         <label for="tensao" class="form-label">Tensão</label>
@@ -60,6 +57,7 @@
     @else
     <button name="submit" valu="cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
     @endif
+
   </form> {{-- FORMULARIO ACABA AQUI --}}
         </div>
     </div>

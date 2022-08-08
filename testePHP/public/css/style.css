@@ -6,3 +6,7 @@
 .editar-produtos{
     display: none;
 }
+
+body {
+    background-color: #efefef;
+    }

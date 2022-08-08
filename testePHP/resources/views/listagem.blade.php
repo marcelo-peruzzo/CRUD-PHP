@@ -36,6 +36,19 @@
   </table>
   </div>
 
+  @if (isset ($cadastrar) && $cadastrar == true)
+    <script>swal("Sucesso!", "Produto cadastrado!", "success");</script>
+    @endif
+
+    @if (isset ($deletar) && $deletar == true)
+    <script>swal("Sucesso!", "Produto deletado!", "success");</script>
+    @endif
+
+    
+    @if (isset ($editar) && $editar == true)
+    <script>swal("Sucesso!", "Produto editado!", "success");</script>
+    @endif
+
 </div>
 
   @endsection
