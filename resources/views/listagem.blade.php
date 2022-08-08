@@ -17,22 +17,22 @@
         <th scope="col">Descrição</th>
       </tr>
     </thead>
-    <tbody>
+      <tbody>
         @foreach($produtos as $key => $val)
-      <tr>
+        <tr>
         <th scope="row">{{$key + 1}}</th>
-        <td>{{$val->nome}}</td>
-        <td>{{$val->quantidade}}</td>
-        <td>{{$val->tensao}}</td>
-        <td>{{$val->marca}}</td>
-        <td>{{$val->descricao}}</td>
-        <td >
-          <a href="/deletar/{{$val->id}}" class="btn btn-outline-danger">Deletar</a>
-          <a href="/editar/{{$val->id}}" class="btn btn-outline-info">Editar</a>
-        </td>
-      </tr>
+          <td>{{$val->nome}}</td>
+          <td>{{$val->quantidade}}</td>
+          <td>{{$val->tensao}}</td>
+          <td>{{$val->marca}}</td>
+          <td>{{$val->descricao}}</td>
+          <td >
+            <a href="/deletar/{{$val->id}}" class="btn btn-outline-danger">Deletar</a>
+            <a href="/editar/{{$val->id}}" class="btn btn-outline-info">Editar</a>
+          </td>
+        </tr>
       @endforeach
-    </tbody>
+      </tbody>
   </table>
   </div>
 

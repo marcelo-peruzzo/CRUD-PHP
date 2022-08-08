@@ -13,6 +13,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+     //Função cadastrar produtos
     public function cadastrar(Request $request){
 
         if($request -> submit == "edit"){
@@ -47,12 +48,13 @@ class Controller extends BaseController
     return view('listagem', ['cadastrar' => true, 'produtos' => $result]);
     
     }
-
+    
     public function retorno(){
         $result = DB::select('select * from produtos');
         return view('listagem', ['produtos' => $result]);
     }
 
+    //Função deletar produtos
     public function deletar($id){
 
         DB::table('produtos')->where('id', '=', $id)->delete();
@@ -60,6 +62,7 @@ class Controller extends BaseController
         return view('listagem', ['deletar' => true, 'produtos' => $result]);
     }
 
+        //Função editar produtos
     public function editar($id){
 
         $result = DB::table('produtos')->where('id', '=', $id)->first();
