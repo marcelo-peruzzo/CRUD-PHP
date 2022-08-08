@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center mt-5">
   <table class="table table-striped">
     <thead>
       <tr>
